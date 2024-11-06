@@ -46,7 +46,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus {
     outline: none;
-    border-color: #3b82f6;
+    border-color: #1a6845;
     background-color: #f0f7ff;
 }
 button {
@@ -57,7 +57,7 @@ button {
     transition: background-color 0.3s ease;
 }
 button:hover {
-    background-color: #2563eb;
+    background-color: #1a6845;
 }
 
 button:disabled {
@@ -84,7 +84,7 @@ button:disabled {
     color: #fff;
 }
 .payment-button.active {
-    background-color: #2563eb;
+    background-color: #1a6845;
     color: white;
 }
 .payment-details {

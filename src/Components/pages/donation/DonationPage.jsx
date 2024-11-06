@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './DonationPage.css';
 import mayaQRCode from "../../../assets/maya.jpg";
 import gcashQRCode from "../../../assets/gcash.jpg";
-import Footer from '../../Footer/Footer';
 
 const DonationPage = () => {
     const [step, setStep] = useState(1);
@@ -32,9 +31,9 @@ const DonationPage = () => {
     const renderStep1 = () => (
         <div className="donation-step">
             <h2>Select Donation Amount</h2>
+            <button onClick={() => setDonationAmount('50')}>₱50</button>
+            <button onClick={() => setDonationAmount('100')}>₱100</button>
             <button onClick={() => setDonationAmount('500')}>₱500</button>
-            <button onClick={() => setDonationAmount('1000')}>₱1000</button>
-            <button onClick={() => setDonationAmount('1500')}>₱1500</button>
             <input 
                 type="number" 
                 placeholder="Enter custom amount" 
@@ -132,6 +131,7 @@ const DonationPage = () => {
                 </div>
             )}
             <button onClick={handleConfirm}>Confirm</button>
+            <button onClick={() => setStep(1)}>Back</button>
         </div>
     );
     return (
@@ -147,7 +147,6 @@ const DonationPage = () => {
                     </>
                 )}
             </div>
-            <Footer />
         </div>
     );
 };

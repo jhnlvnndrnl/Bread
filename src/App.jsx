@@ -6,7 +6,10 @@ import NumbersSections from './components/numberssection/NumbersSection';
 import NewsSection from './components/newssection/NewsSection';
 import Footer from './components/footer/Footer';
 import MainSection from './components/pages/careers/MainSection';
-import FirstSection from './components/pages/breadforgood/FirstSection';
+import FirstSection from './Components/pages/breadforgood/firstsection/FirstSection'
+import SecondSection from './Components/pages/breadforgood/secondsection/SecondSection';
+import ThirdSection from './Components/pages/breadforgood/thirdsection/ThirdSection';
+import FourthSection from './Components/pages/breadforgood/fourthsection/FourthSection';
 import DonationPage from './components/pages/donation/DonationPage';
 
 const App = () => {
@@ -44,6 +47,9 @@ const App = () => {
           <>
             <Navbar />
             <FirstSection />
+            <SecondSection />
+            <ThirdSection />
+            <FourthSection />
             <Footer />
           </>
         }/>
