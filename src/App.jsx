@@ -11,6 +11,7 @@ import SecondSection from './Components/pages/breadforgood/secondsection/SecondS
 import ThirdSection from './Components/pages/breadforgood/thirdsection/ThirdSection';
 import FourthSection from './Components/pages/breadforgood/fourthsection/FourthSection';
 import PaymentForm from './Components/pages/donation/PaymentForm';
+import MiniSection from './Components/pages/breadforgood/miniSection/MiniSection';
 
 
 const App = () => {
@@ -48,6 +49,7 @@ const App = () => {
           <>
             <Navbar />
             <FirstSection />
+            < MiniSection/>
             <SecondSection />
             <ThirdSection />
             <FourthSection />

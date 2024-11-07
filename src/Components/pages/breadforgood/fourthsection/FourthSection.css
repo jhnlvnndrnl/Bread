@@ -1,69 +1,65 @@
 .fourth-position {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: #fdfdfd;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    min-height: 620px;
-    padding: 30px;
-  }
-  
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f1f1f1;
+  width: 100%;
+  min-height: 620px;
+  padding: 30px;
+}
+
+.donate2 {
+  position: relative;
+  height: 60%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: -30px;
+}
+
+.donateClass {
+  width: 600px;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+@media (max-width: 1258px) {
   .donate2 {
-    position: relative;
-    height: 60%;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    margin-left: -30px;
+    height: 300px;
+    margin-left: -120px;
   }
-  
+}
+
+@media (max-width: 831px) {
   .donateClass {
-    width: 600px;
+    width: 550px;
+  }
+}
+
+@media (max-width: 790px) {
+  .Fifth-layer {
+    min-height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: center;
+  }
+
+  .donate2 {
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2); /* Fixing the calculation */
+    margin-right: calc((100vw - 100%) / -2); /* Ensuring proper margin handling */
+    margin-bottom: 40px;
     height: auto;
-    max-height: 100%;
-    object-fit: contain;
-    cursor: pointer;
   }
-  
-  @media (max-width: 1258px) {
-    .donate2 {
-      height: 300px;
-      margin-left: -120px;
-    }
+
+  .donateClass {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
-  
-  @media (max-width: 831px) {
-    .donateClass {
-      width: 550px;
-    }
-    
-  }
-  
-  @media (max-width: 790px) {
-    .Fifth-layer {
-      min-height: auto;
-      padding-top: 60px;
-      padding-bottom: 60px;
-      align-items: center;
-    }
-  
-    .donate2 {
-      width: 100vw;
-      margin-left: calc((100vw - 100%) / -2); /*chatgpt na HAHAHAHA de keri sakit na sa ulo tong part na to*/
-      margin-right: calc((100vw - 100%) / -2);
-      margin-bottom: 40px;
-      height: auto;
-    }
-  
-    .donateClass {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-    }
-  
-  }
+}

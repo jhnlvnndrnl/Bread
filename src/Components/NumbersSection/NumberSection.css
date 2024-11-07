@@ -6,10 +6,10 @@
   align-items: center;
   position: relative;
   background-color: #1f1f1f;
-  min-height: 922px;
   width: 100%;  
+  padding-bottom: 200px;
 }
-  
+
 .numbers-intro {
   position: relative;
   padding: 20px;
@@ -19,43 +19,58 @@
   font-weight: 500;
   max-width: 700px;
   margin: 0 auto 30px; 
-  padding-top: 190px; 
-  margin-top: -100px;  
+  padding-top: 190px;
+  margin-top: -100px; 
 }
-  
+
 .numbers-intro h1 {
   margin-bottom: 25px;
   font-size: 47px;
 }
-  
+
 .numbers-intro p {
   color: #f1f1f1;
   font-size: 19px;
   margin-bottom: 30px;
 }
 
-.numbers-intro  span {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+.numbers-intro span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #ffffffde;
   font-size: 14px;  
 }
-  
+
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center; 
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
-  
+
 .card {
   background-color: #1f1f1f;
   border: 1px solid rgba(255, 255, 255, 0.712);
   padding: 20px;
   border-radius: 24px;
   width: 220px; 
-  height: 180px;
+  height: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   box-sizing: border-box;  
 }
+
+.count {
+  font-size: 50px;
+  font-weight: 600;
+  color: #31cc86; 
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 16px;
+  color: #f1f1f1;
+  text-align: center;
+} 

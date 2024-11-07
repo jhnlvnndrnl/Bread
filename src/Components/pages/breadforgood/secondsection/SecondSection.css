@@ -2,10 +2,8 @@
     box-sizing: border-box;
     display: flex;
     position: relative;
-    background-color: #fdfdfd;
+    background-color: #f1f1f1;
     width: 100%;
-    justify-content: center;
-    align-items: center; 
     min-height: 620px;
     padding: 30px;
   }
@@ -14,6 +12,7 @@
     display: flex; 
     align-items: center;
     gap: 80px;
+    margin-left: 100px;
   }
   
   .donate {
@@ -35,11 +34,12 @@
     flex-direction: column; 
     justify-content: center; 
     align-items: flex-start; 
+
   }
   
   .Heading {
     font-size: 45px;
-    color: #28a745;
+    color: #31cc86;
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     padding-bottom: 20px;
@@ -50,14 +50,14 @@
     color: #1f1f1f;
     line-height: 1.5;
     padding-bottom: 15px;
+    width: 500px;  
   }
   
   .LearnMoreButton {
     margin-top: 20px;
     padding: 10px 16px;
     font-size: 19px;
-    color: white;
-    background-color: #28a745;
+    background-color: #31cc86;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -68,7 +68,7 @@
   }
   
   .LearnMoreButton:hover {
-    background-color: #22963d;
+    background-color: #2cb376;
   }
   
   
