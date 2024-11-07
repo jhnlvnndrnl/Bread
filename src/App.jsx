@@ -10,7 +10,8 @@ import FirstSection from './Components/pages/breadforgood/firstsection/FirstSect
 import SecondSection from './Components/pages/breadforgood/secondsection/SecondSection';
 import ThirdSection from './Components/pages/breadforgood/thirdsection/ThirdSection';
 import FourthSection from './Components/pages/breadforgood/fourthsection/FourthSection';
-import DonationPage from './components/pages/donation/DonationPage';
+import PaymentForm from './Components/pages/donation/PaymentForm';
+
 
 const App = () => {
   return (
@@ -30,8 +31,8 @@ const App = () => {
         <Route path='/donation' element={ 
           <>
             <Navbar />
-            <DonationPage /> 
-            {/* <Footer /> */}
+            <PaymentForm />
+            <Footer />
           </>
         }/> 
 

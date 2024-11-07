@@ -10,13 +10,13 @@
   max-height: 800px;
   overflow: hidden; 
   padding-top: 50px; 
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .main-section {
   padding: 20px;
   color: #1f1f1fe7;
   text-align: left; 
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 500;
   max-width: 700px;
   padding-top: 150px;
