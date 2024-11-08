@@ -9,6 +9,7 @@ const AboutSection = () => {
         <h1>What we do?</h1>
         <p>Bread is dedicated to making a meaningful impact through various charitable efforts. Here are our key focus areas:</p>
         <ul className="about-subtext">
+          {/* This would make a good UX if when hovered, a dropdown appears explaining these phrases */}
           <li>Community Support</li>
           <li>Food Assistance</li>
           <li>Education & Training</li>

@@ -3,6 +3,7 @@ import React from 'react';
 import './HomeSection.css'
 
 const HomeSection = () => {
+  // Too much white space, could be improved further.
   return (
     <div className="second-layer">
       <section id="home" className="home-section">

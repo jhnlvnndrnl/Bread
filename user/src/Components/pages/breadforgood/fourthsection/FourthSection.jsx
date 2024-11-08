@@ -2,6 +2,10 @@ import React from "react";
 import "./FourthSection.css";
 import charity from "../../../../assets/charity.png"
 
+
+// be ready for pagination if you're going to go beyond 5 articles
+// also, you can just create 1 section component and make the content dynamic (using variables instead of hard-coded html text)
+// this wastes the modularity of components.
 const FourthSection = () => {
   return (
     <div className="fourth-position">
