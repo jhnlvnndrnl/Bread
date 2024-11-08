@@ -62,19 +62,19 @@ const NumbersSection = () => {
 
       <main className="cards">
         <div className="card">
-          <h2 className="count">{count1}</h2>
+          <h2 className="count">{count1}K</h2>
           <p className="label">Donations Made</p>
         </div>
         <div className="card">
-          <h2 className="count">{count2}</h2>
+          <h2 className="count">{count2}K</h2>
           <p className="label">Volunteers Involved</p>
         </div>
         <div className="card">
-          <h2 className="count">{count3}</h2>
+          <h2 className="count">{count3}K</h2>
           <p className="label">Projects Funded</p>
         </div>
         <div className="card">
-          <h2 className="count">{count4}</h2>
+          <h2 className="count">{count4}K</h2>
           <p className="label">Communities Reached</p>
         </div>
       </main>
