@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
-import HomeSection from './components/homesection/HomeSection';
-import AboutSection from './components/aboutsection/AboutSection';
-import NumbersSections from './components/numberssection/NumbersSection';
-import NewsSection from './components/newssection/NewsSection';
-import Footer from './components/footer/Footer';
-import MainSection from './components/pages/careers/MainSection';
+// NOTE: File names caused error in importing
+import Navbar from './Components/Navbar/Navbar';
+import HomeSection from './Components/HomeSection/HomeSection';
+import AboutSection from './Components/AboutSection/AboutSection';
+import NumbersSections from './Components/NumbersSection/NumbersSection';
+import NewsSection from './Components/NewsSection/NewsSection';
+import Footer from './Components/Footer/Footer';
+import MainSection from './Components/pages/careers/MainSection';
 import FirstSection from './Components/pages/breadforgood/firstsection/FirstSection'
 import SecondSection from './Components/pages/breadforgood/secondsection/SecondSection';
 import ThirdSection from './Components/pages/breadforgood/thirdsection/ThirdSection';

@@ -27,12 +27,14 @@ const PaymentForm = () => {
         e.preventDefault();
         console.log("Form submitted", formData);
     };
-
+    // UI Notes: Indicate required fields and prevent submitting when object has null value (you can disable the submit button first then enable it when details are complete)
+    // Remove number inputs' arrows (you can hide them using CSS)
     return (
        <div className="main">
             <div className="con-layer">
                 <section className="con-section">
                     <h2>Together, We Make a Difference</h2>
+                    {/* could be further improved in style - be concise as possible, less is more */}
                     <p>Every donation helps us take meaningful steps toward creating cleaner and more connected communities. For every <span>50 PHP</span> contributed, we are able to remove <span>1 kilogram</span> of trash from our environment. The funds collected will go directly to local charities, allowing us to extend kindness to those who need it most while keeping our surroundings beautiful and sustainable. Join us in fostering a spirit of <span>generosity</span> and making a <span>positive impact</span> together.</p>
                 </section>
             </div>

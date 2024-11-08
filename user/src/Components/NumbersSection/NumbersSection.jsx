@@ -47,7 +47,7 @@ const NumbersSection = () => {
       if (count2 < 250) setCount2(prev => prev + 1);
       if (count3 < 800) setCount3(prev => prev + 1);
       if (count4 < 500) setCount4(prev => prev + 1);
-    }, 20); // Increment every 20ms
+    }, 200); // Increment every 20ms
 
     return () => clearInterval(interval); // Clean up the interval on unmount
   }, [isInView, count1, count2, count3, count4]);
@@ -59,7 +59,7 @@ const NumbersSection = () => {
         <p>Bread is a growing community dedicated to making a difference through charitable efforts and donations.</p>
         <p><span>As of September, 2024</span></p>
       </section>
-
+      {/*  K should not be hard-coded, you can create a simple function that converts int values to strings with K (can use modulo operators) */}
       <main className="cards">
         <div className="card">
           <h2 className="count">{count1}K</h2>
