@@ -47,7 +47,7 @@ const NumbersSection = () => {
       if (count2 < 250) setCount2(prev => prev + 1);
       if (count3 < 800) setCount3(prev => prev + 1);
       if (count4 < 500) setCount4(prev => prev + 1);
-    }, 200); // Increment every 20ms
+    }, 20); // Increment every 20ms
 
     return () => clearInterval(interval); // Clean up the interval on unmount
   }, [isInView, count1, count2, count3, count4]);
