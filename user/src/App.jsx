@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // NOTE: File names caused error in importing
 import Navbar from './Components/Navbar/Navbar';
 import HomeSection from './Components/HomeSection/HomeSection';
