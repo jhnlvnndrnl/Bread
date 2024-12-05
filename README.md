@@ -21,14 +21,14 @@
 - Color Hex Codes: https://color-hex.com/ 
 - Vitejs.dev: https://vitejs.dev
 - Node.js: https://nodejs.org/en
-- Bootstrap: https://getbootstrap.com/
+- React-Bootstrap: https://react-bootstrap.netlify.app/
 - MongoDB: https://cloud.mongodb.com/
 
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 You have Reached the end! Thank you for taking the time to read this.
-> BREAD team
+> SE Team
 
 ```
 For Removal of Content please contact us through the following:
