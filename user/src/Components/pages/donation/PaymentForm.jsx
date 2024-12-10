@@ -23,23 +23,39 @@ const PaymentForm = () => {
         });
     };
 
+    // Restricting the input to digits only
+    const handleNumberInput = (e) => {
+        const { name, value } = e.target;
+        // Allow only digits (0-9)
+        if (!/^\d*$/.test(value)) {
+            setFormData({
+                ...formData,
+                [name]: value.replace(/[^0-9]/g, '') // Remove non-digits
+            });
+        } else {
+            setFormData({
+                ...formData,
+                [name]: value
+            });
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form submitted", formData);
     };
-    // UI Notes: Indicate required fields and prevent submitting when object has null value (you can disable the submit button first then enable it when details are complete)
-    // Remove number inputs' arrows (you can hide them using CSS)
+
+    // Check if the form is valid (all fields filled)
+    const isFormValid = Object.values(formData).every(value => value !== '');
+
     return (
-       <div className="main">
+        <div className="main">
             <div className="con-layer">
                 <section className="con-section">
                     <h2>Together, We Make a Difference</h2>
-                    {/* could be further improved in style - be concise as possible, less is more */}
                     <p>Every donation helps us take meaningful steps toward creating cleaner and more connected communities. For every <span>50 PHP</span> contributed, we are able to remove <span>1 kilogram</span> of trash from our environment. The funds collected will go directly to local charities, allowing us to extend kindness to those who need it most while keeping our surroundings beautiful and sustainable. Join us in fostering a spirit of <span>generosity</span> and making a <span>positive impact</span> together.</p>
                 </section>
             </div>
-
-            
             <div className="container">
                 <form onSubmit={handleSubmit}>
                     <div className="row">
@@ -100,11 +116,11 @@ const PaymentForm = () => {
                                 <div className="input-box">
                                     <span>Zip Code :</span>
                                     <input
-                                        type="number"
+                                        type="text"  // Changed to 'text' so we can manually filter digits only
                                         name="zip"
                                         placeholder="123 456"
                                         value={formData.zip}
-                                        onChange={handleChange}
+                                        onInput={handleNumberInput}  // Restricting input to digits only
                                     />
                                 </div>
                             </div>
@@ -112,10 +128,6 @@ const PaymentForm = () => {
 
                         <div className="column">
                             <h3 className="title">Payment</h3>
-                            <div className="input-box">
-                                <span>Cards Accepted :</span>
-                                {/* <img src="imgcards.png" alt="Accepted Cards" /> */}
-                            </div>
                             <div className="input-box">
                                 <span>Name On Card :</span>
                                 <input
@@ -129,11 +141,12 @@ const PaymentForm = () => {
                             <div className="input-box">
                                 <span>Credit Card Number :</span>
                                 <input
-                                    type="number"
+                                    type="text"  // Using text to manually filter digits only
                                     name="cardNumber"
                                     placeholder="1111 2222 3333 4444"
                                     value={formData.cardNumber}
-                                    onChange={handleChange}
+                                    onInput={handleNumberInput}  // Restricting input to digits only
+                                    maxLength="16" // Enforcing 16 characters
                                 />
                             </div>
                             <div className="input-box">
@@ -151,7 +164,7 @@ const PaymentForm = () => {
                                 <div className="input-box">
                                     <span>Exp. Year :</span>
                                     <input
-                                        type="number"
+                                        type="text"
                                         name="expYear"
                                         placeholder="2025"
                                         value={formData.expYear}
@@ -161,18 +174,25 @@ const PaymentForm = () => {
                                 <div className="input-box">
                                     <span>CVV :</span>
                                     <input
-                                        type="number"
+                                        type="password"  // Changed to 'password' for CVV security
                                         name="cvv"
                                         placeholder="123"
                                         value={formData.cvv}
-                                        onChange={handleChange}
+                                        onInput={handleNumberInput}  // Restricting input to digits only
+                                        maxLength="3"  // CVV is usually 3 digits
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <button type="submit" className="btn">Submit</button>
+                    <button 
+                        type="submit" 
+                        className="btn" 
+                        disabled={!isFormValid}
+                    >
+                        Submit
+                    </button>
                 </form>
             </div>
         </div>

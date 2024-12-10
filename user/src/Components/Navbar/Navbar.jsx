@@ -22,16 +22,19 @@ const Navbar = () => {
         <a className="navbar-brand" href="/">
           <img className="logo" src={logo} alt="Bread Logo" />
         </a>
-        <button
-          className="navbar-toggler custom-toggler"
-          type="button"
-          onClick={toggleMenu}
-          aria-controls="navbarNav"
-          aria-expanded={isMenuOpen}
-          aria-label="Toggle navigation"
-        >
-          <i className="fas fa-bars"></i> {/* Custom hamburger icon */}
-        </button>
+        {/* Hide the burger icon if the current route is '/donation' */}
+        {location.pathname !== '/donation' && (
+          <button
+            className="navbar-toggler custom-toggler"
+            type="button"
+            onClick={toggleMenu}
+            aria-controls="navbarNav"
+            aria-expanded={isMenuOpen}
+            aria-label="Toggle navigation"
+          >
+            <i className="fas fa-bars"></i> {/* Custom hamburger icon */}
+          </button>
+        )}
         <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className={`navbar-nav ms-auto align-items-center ${isMenuOpen ? 'bg-custom' : ''}`}>
             {location.pathname === '/donation' ? (
@@ -45,9 +48,6 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <a href="/careers" className="nav-link" onClick={closeMenu}>Careers</a>
-                </li>
-                <li className="nav-item">
-                  <a href="/bfg" className="nav-link" onClick={closeMenu}>Bread for Good</a>
                 </li>
                 <li className="nav-item">
                   <Link 

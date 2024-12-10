@@ -1,6 +1,5 @@
-//This is the about section
 import React from 'react';
-import './AboutSection.css'
+import './AboutSection.css';
 
 const AboutSection = () => {
   return (
@@ -9,11 +8,30 @@ const AboutSection = () => {
         <h1>What we do?</h1>
         <p>Bread is dedicated to making a meaningful impact through various charitable efforts. Here are our key focus areas:</p>
         <ul className="about-subtext">
-          {/* This would make a good UX if when hovered, a dropdown appears explaining these phrases */}
-          <li>Community Support</li>
-          <li>Food Assistance</li>
-          <li>Education & Training</li>
-          <li>Health & Wellness</li>
+          <li>
+            Community Support
+            <div className="description">
+              We provide support to local communities through various outreach programs.
+            </div>
+          </li>
+          <li>
+            Food Assistance
+            <div className="description">
+              We distribute food to those in need to combat hunger.
+            </div>
+          </li>
+          <li>
+            Education & Training
+            <div className="description">
+              We offer educational resources and training programs to empower individuals.
+            </div>
+          </li>
+          <li>
+            Health & Wellness
+            <div className="description">
+              We promote health and wellness by providing necessary medical resources and support.
+            </div>
+          </li>
         </ul>
       </section>
     </div>

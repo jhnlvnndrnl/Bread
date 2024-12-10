@@ -16,9 +16,6 @@ const MainSection = () => {
           <button className="join-button"><a href="#career-second-layer"> Join Us </a>
           </button>
         </section>
-        <div className="image-container">
-              <img src={logoCareer} alt="Career Logo" className="career-logo"/>
-            </div>
       </div>
 
       <div className="career-second-layer" id="career-second-layer">

@@ -1,30 +1,30 @@
 .career-layer {
   box-sizing: border-box;
   display: flex;
-  flex-direction: row; 
-  align-items: center; 
-  justify-content: center; 
+  flex-direction: column; /* Change from row to column for smaller screens */
+  align-items: center;
+  justify-content: center;
   position: relative;
-  background-color: #31cc86;
+  background: linear-gradient(135deg, #4CAF50, #fff); /* Green to White gradient */
   width: 100%;
-  min-height: 900px;
-  overflow: hidden; 
-  padding-top: 50px; 
+  min-height: 750px;
+  overflow: hidden;
+  padding-top: 50px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .main-section {
   padding: 20px;
   color: #1f1f1fe7;
-  text-align: left; 
+  text-align: center;
   font-weight: 500;
   max-width: 700px;
   padding-top: 150px;
   padding-bottom: 200px;
   padding-left: 50px;
-  margin-right: -100px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  align-items: center;
 }
 
 .career-layer .image-container {
@@ -43,12 +43,14 @@
   font-size: 65px;
   margin-bottom: 15px;
   font-weight: 600;
+  text-align: center;
 }
 
 .main-section p {
   font-size: 19px;
   margin-bottom: 10px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .main-section span {
@@ -59,7 +61,6 @@
   background-color: #f1f1f1;
   width: 200px;
   padding: 8px;
-  color: #1f1f1f;
   font-size: 18px;
   border: 2px solid transparent;
   border-radius: 20px;
@@ -68,11 +69,16 @@
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.join-button a:visited {
-  color: inherit;/*para ma inherit nya yung color na black nag sset kasi sa violet*/
+.join-button a {
+  color: #31cc86;
+  text-decoration: none;
 }
 
-.join-button a:active {/*same dito nag rred naman  if na click*/
+.join-button a:visited {
+  color: inherit;
+}
+
+.join-button a:active {
   color: inherit;
 }
 
@@ -90,7 +96,6 @@
   background-color: #ffffff;
   width: 100%;
   justify-content: center;
-  
 }
 
 .second-section {
@@ -141,14 +146,79 @@
   text-align: left;
 }
 
+/* Responsive styles */
+@media (max-width: 952px) {
+  .career-layer {
+    padding-top: 30px; /* Adjust padding for smaller screens */
+  }
+  
+  .main-section h2 {
+    font-size: 50px;
+  }
+
+  .main-section p {
+    font-size: 16px;
+  }
+
+  .join-button {
+    width: 180px;
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
+  .career-layer {
+    padding-top: 20px;
+  }
+
+  .main-section h2 {
+    font-size: 45px;
+  }
+
+  .main-section p {
+    font-size: 16px;
+  }
+
   .grid-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+  }
+
+  .grid-item {
+    font-size: 24px;
+  }
+
+  .grid-item h1 {
+    font-size: 28px;
   }
 }
 
 @media (max-width: 480px) {
+  .career-layer {
+    padding-top: 20px;
+  }
+
+  .main-section h2 {
+    font-size: 36px;
+  }
+
+  .main-section p {
+    font-size: 14px;
+  }
+
+  .join-button {
+    width: 160px;
+    font-size: 14px;
+  }
+
   .grid-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .grid-item {
+    font-size: 18px;
+  }
+
+  .grid-item h1 {
+    font-size: 24px;
   }
 }

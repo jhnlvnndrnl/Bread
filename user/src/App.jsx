@@ -8,13 +8,7 @@ import NumbersSections from './Components/NumbersSection/NumbersSection';
 import NewsSection from './Components/NewsSection/NewsSection';
 import Footer from './Components/Footer/Footer';
 import MainSection from './Components/pages/careers/MainSection';
-import FirstSection from './Components/pages/breadforgood/firstsection/FirstSection'
-import SecondSection from './Components/pages/breadforgood/secondsection/SecondSection';
-import ThirdSection from './Components/pages/breadforgood/thirdsection/ThirdSection';
-import FourthSection from './Components/pages/breadforgood/fourthsection/FourthSection';
-import PaymentForm from './Components/pages/donation/PaymentForm';
-import MiniSection from './Components/pages/breadforgood/miniSection/MiniSection';
-
+import PaymentForm from './Components/pages/donation/PaymentForm'
 
 const App = () => {
   return (
@@ -35,7 +29,6 @@ const App = () => {
           <>
             <Navbar />
             <PaymentForm />
-            <Footer />
           </>
         }/> 
 
@@ -46,19 +39,6 @@ const App = () => {
             <Footer />
           </>
         }/>
-
-        <Route path='/bfg' element={
-          <>
-            <Navbar />
-            <FirstSection />
-            < MiniSection/>
-            <SecondSection />
-            <ThirdSection />
-            <FourthSection />
-            <Footer />
-          </>
-        }/>
-
       </Routes>
     </Router>
   );

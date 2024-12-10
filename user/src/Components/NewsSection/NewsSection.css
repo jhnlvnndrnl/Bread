@@ -1,3 +1,4 @@
+/* Existing Styles */
 .fifth-layer {
   padding: 20px;
   box-sizing: border-box;
@@ -23,12 +24,15 @@
 .news-section h1 {
   font-size: 47px;
   margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .news-section p {
   font-size: 19px;
+  font-weight: 500;
 }
 
+/* Grid Layout */
 .news-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -122,4 +126,89 @@
 
 .news-btn:hover {
   background-color: #2cb376; 
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .news-section h1 {
+    font-size: 40px; /* Slightly smaller title */
+  }
+
+  .news-section p {
+    font-size: 17px; /* Smaller paragraph text */
+  }
+
+  .news-box {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    gap: 20px;
+  }
+
+  .news-container {
+    width: 100%;
+  }
+
+  .news-box-1, .news-box-2, .news-box-3, .news-box-4 {
+    width: 100%; /* Make the news box responsive */
+    height: 280px; /* Adjust height */
+  }
+
+  .news-text {
+    font-size: 18px; /* Smaller text */
+  }
+}
+
+@media (max-width: 768px) {
+  .news-section h1 {
+    font-size: 35px; /* Smaller title for mobile */
+  }
+
+  .news-section p {
+    font-size: 16px; /* Smaller paragraph text for mobile */
+  }
+
+  .news-box {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 20px;
+  }
+
+  .news-container {
+    width: 100%; /* Full width container */
+  }
+
+  .news-box-1, .news-box-2, .news-box-3, .news-box-4 {
+    width: 100%; /* Full width for mobile */
+    height: 220px; /* Adjust height for mobile */
+  }
+
+  .news-text {
+    font-size: 16px; /* Smaller text on mobile */
+  }
+
+  .news-btn {
+    width: 100%; /* Full width button on mobile */
+    font-size: 14px; /* Smaller button text */
+  }
+}
+
+@media (max-width: 480px) {
+  .news-section h1 {
+    font-size: 28px; /* Much smaller title for very small screens */
+  }
+
+  .news-section p {
+    font-size: 14px; /* Smaller text for small screens */
+  }
+
+  .news-box-1, .news-box-2, .news-box-3, .news-box-4 {
+    width: 100%; /* Full width for very small screens */
+    height: 200px; /* Adjust height further */
+  }
+
+  .news-text {
+    font-size: 14px; /* Even smaller text */
+  }
+
+  .news-btn {
+    font-size: 12px; /* Smaller button text */
+  }
 }
