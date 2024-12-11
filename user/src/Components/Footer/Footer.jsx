@@ -36,9 +36,9 @@ const Footer = () => {
         </p>
 
         <div className="footer-icons">
-          <img src={fbIcon} alt="Facebook" width="35px" />
-          <img src={igIcon} alt="Instagram" width="35px" />
-          <img src={ytIcon} alt="YouTube" width="35px" />
+          <img src={fbIcon} alt="Facebook" width="35px" className='m-2' />
+          <img src={igIcon} alt="Instagram" width="35px" className='m-2'  />
+          <img src={ytIcon} alt="YouTube" width="35px" className='m-2' />
         </div>
       </div>
     </footer>

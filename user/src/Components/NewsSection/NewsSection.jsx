@@ -6,7 +6,7 @@ const NewsSection = () => {
   const navigate = useNavigate(); // Hook for navigation
 
   const handleButtonClick = () => {
-    navigate('/bfg');
+    navigate('/'); //for future articles
   };
 
   return (

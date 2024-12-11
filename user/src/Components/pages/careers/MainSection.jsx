@@ -1,6 +1,5 @@
 import React from 'react';
 import './MainSection.css';
-import logoCareer from "../../../assets/logo-career.png";
 
 const MainSection = () => {
   return (
@@ -13,7 +12,7 @@ const MainSection = () => {
             <span> inspire change,</span> or <span>build lasting connections,</span> explore a fulfilling career with us. Together, we can make a
             meaningful difference in the community.
           </p>
-          <button className="join-button"><a href="#career-second-layer"> Join Us </a>
+          <button className="join-button"><a href="#contact"> Join Us </a>
           </button>
         </section>
       </div>

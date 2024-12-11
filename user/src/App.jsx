@@ -9,6 +9,7 @@ import NewsSection from './Components/NewsSection/NewsSection';
 import Footer from './Components/Footer/Footer';
 import MainSection from './Components/pages/careers/MainSection';
 import PaymentForm from './Components/pages/donation/PaymentForm'
+import ContactSection from './Components/pages/careers/ContactSection';
 
 const App = () => {
   return (
@@ -36,7 +37,7 @@ const App = () => {
           <>
             <Navbar />
             <MainSection />
-            <Footer />
+            <ContactSection />
           </>
         }/>
       </Routes>
