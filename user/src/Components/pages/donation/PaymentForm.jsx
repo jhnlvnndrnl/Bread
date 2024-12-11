@@ -23,14 +23,12 @@ const PaymentForm = () => {
         });
     };
 
-    // Restricting the input to digits only
     const handleNumberInput = (e) => {
         const { name, value } = e.target;
-        // Allow only digits (0-9)
         if (!/^\d*$/.test(value)) {
             setFormData({
                 ...formData,
-                [name]: value.replace(/[^0-9]/g, '') // Remove non-digits
+                [name]: value.replace(/[^0-9]/g, '')
             });
         } else {
             setFormData({
@@ -40,13 +38,49 @@ const PaymentForm = () => {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form submitted", formData);
+
+        // Prepare data to send
+        const donorData = {
+            name: formData.fullName,
+            email: formData.email
+        };
+
+        try {
+            const response = await fetch('http://localhost:3000/donors', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(donorData),
+            });
+
+            if (response.ok) {
+                console.log("Data successfully saved!");
+                alert("Thank you for your generosity! 😊 Your contribution makes a positive impact on the community.");
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    address: '',
+                    city: '',
+                    state: '',
+                    zip: '',
+                    cardName: '',
+                    cardNumber: '',
+                    expMonth: '',
+                    expYear: '',
+                    cvv: ''
+                });
+            } else {
+                console.error("Failed to save data");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
-    // Check if the form is valid (all fields filled)
-    const isFormValid = Object.values(formData).every(value => value !== '');
+    const isFormValid = Object.values(formData).every((value) => value.trim() !== '');
 
     return (
         <div className="main">
@@ -101,7 +135,6 @@ const PaymentForm = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-
                             <div className="flex">
                                 <div className="input-box">
                                     <span>State :</span>
@@ -116,16 +149,15 @@ const PaymentForm = () => {
                                 <div className="input-box">
                                     <span>Zip Code :</span>
                                     <input
-                                        type="text"  // Changed to 'text' so we can manually filter digits only
+                                        type="text"
                                         name="zip"
                                         placeholder="123 456"
                                         value={formData.zip}
-                                        onInput={handleNumberInput}  // Restricting input to digits only
+                                        onInput={handleNumberInput}
                                     />
                                 </div>
                             </div>
                         </div>
-
                         <div className="column">
                             <h3 className="title">Payment</h3>
                             <div className="input-box">
@@ -141,12 +173,12 @@ const PaymentForm = () => {
                             <div className="input-box">
                                 <span>Credit Card Number :</span>
                                 <input
-                                    type="text"  // Using text to manually filter digits only
+                                    type="text"
                                     name="cardNumber"
                                     placeholder="1111 2222 3333 4444"
                                     value={formData.cardNumber}
-                                    onInput={handleNumberInput}  // Restricting input to digits only
-                                    maxLength="16" // Enforcing 16 characters
+                                    onInput={handleNumberInput}
+                                    maxLength="16"
                                 />
                             </div>
                             <div className="input-box">
@@ -159,7 +191,6 @@ const PaymentForm = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-
                             <div className="flex">
                                 <div className="input-box">
                                     <span>Exp. Year :</span>
@@ -174,18 +205,17 @@ const PaymentForm = () => {
                                 <div className="input-box">
                                     <span>CVV :</span>
                                     <input
-                                        type="password"  // Changed to 'password' for CVV security
+                                        type="password"
                                         name="cvv"
                                         placeholder="123"
                                         value={formData.cvv}
-                                        onInput={handleNumberInput}  // Restricting input to digits only
-                                        maxLength="3"  // CVV is usually 3 digits
+                                        onInput={handleNumberInput}
+                                        maxLength="3"
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <button 
                         type="submit" 
                         className="btn" 
