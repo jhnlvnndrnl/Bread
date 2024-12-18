@@ -1,6 +1,6 @@
 # 🌐 The Website
 - This is the Bread website that is still under Development
-- Status: Working
+- Status: Done
 
 # Maintainers:
 - John Elvin Endrenal
@@ -31,6 +31,6 @@ You have Reached the end! Thank you for taking the time to read this.
 > SE Team
 
 ```
-For Removal of Content please contact us through the following:
+For Reccomendations of Content please contact us through the following:
 endrenal.346349@sanpablo.sti.edu.ph
 ```
